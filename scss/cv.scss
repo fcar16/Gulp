@@ -1,0 +1,97 @@
+@import "variables";
+@import "estructuras_repetitivas";
+@import "funciones\ y\ _temas";
+@import "mixins";
+@import "menu";
+
+
+
+
+
+
+*{
+    @include reset-pm();
+    box-sizing:border-box;
+ }
+body{
+    background-color:$primary-color;
+    font-family: Arial, Helvetica, sans-serif ;
+}
+a{
+    color:$secondary-color;
+    text-decoration:none ;
+}
+
+h2{
+    font-weight: bolder;
+    font-size: size(6);
+}
+h3{
+    font-weight: lighter;
+    font-size: size(3);
+}
+
+.container{
+    background-color: white;
+    margin: 100px auto;
+    width: 1280px;
+    padding: 50px;
+    box-shadow: 0 0 20px 2px rgba(0,0,0,0.6);
+    
+    background-image: url(../Fondo.jpg);
+    background-size: 100px;
+}
+
+ul{
+    @include reset-pm();
+    list-style:none;
+    display:flex;
+    gap: 20px;
+    li{
+         a{
+            @include btn($background-color: $terciary-color,$color: $font-color, $bold:'true');
+
+            &:hover{
+                @include btn($secondary-color,$terciary-color,'false');
+                box-shadow: $box-shadow;
+            }
+        }
+
+    }
+}
+header{
+    nav{
+        display:flex;
+        align-items:center;
+        justify-content: space-between;
+    }
+}
+.prices{
+ 
+    .now{
+    
+        font-size:size(5);
+       font-weight:bolder;
+    }
+    
+}
+.row{
+
+    display:flex;
+    align-items:center;
+    .col{
+        width:50%;
+    }
+    .col-30{
+        width:30%;
+    }
+    .col-70{
+        width:70%;
+    }
+}
+
+.m-auto{
+    margin:0 auto;
+}
+  
+       
